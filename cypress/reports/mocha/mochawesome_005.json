@@ -1,0 +1,88 @@
+{
+  "stats": {
+    "suites": 0,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-09-23T12:26:21.167Z",
+    "end": "2020-09-23T12:26:39.959Z",
+    "duration": 18792,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "52f557e9-bbb4-4fdc-a8b7-26a2d7616286",
+      "title": "",
+      "fullFile": "cypress\\integration\\QAM\\Edit_organization.js",
+      "file": "cypress\\integration\\QAM\\Edit_organization.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "Edit Organization",
+          "fullTitle": "Edit Organization",
+          "timedOut": null,
+          "duration": 13097,
+          "state": "passed",
+          "speed": "slow",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "cy.visit('https://user1.dev.bonoud.com/');\ncy.get('#user_name').type('user1');\ncy.get('input[type=\"password\"]').type('asdfghjkl1');\ncy.get('.mat-raised-button').contains('دخول').click();\ncy.visit('https://user1.dev.bonoud.com/organization');\ncy.get('button').contains('تعديل').click();\ncy.get('#name').clear();\ncy.get('#name').type('automation_O');\ncy.get('#phone').clear();\ncy.get('#phone').type('0492288616');\ncy.get('#email').clear();\ncy.get('#email').type('automation_testing@g.com');\ncy.get('#address').clear();\ncy.get('#address').type('Nablus');\nvar imageName = 'wrong_response.png';\ncy.get('ngx-mat-file-input').attachFile(imageName);\ncy.get('button[color=\"primary\"]').contains('حفظ').click(); //cy.contains(\"تم تعديل بنجاح\",{timeout:100})",
+          "err": {},
+          "uuid": "45414032-b665-4540-afdb-70ccc33bee3a",
+          "parentUUID": "52f557e9-bbb4-4fdc-a8b7-26a2d7616286",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [
+        "45414032-b665-4540-afdb-70ccc33bee3a"
+      ],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 13097,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}

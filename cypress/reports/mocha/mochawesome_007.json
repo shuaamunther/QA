@@ -1,0 +1,111 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2020-09-23T12:27:22.385Z",
+    "end": "2020-09-23T12:27:53.863Z",
+    "duration": 31478,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "cfb342d9-deee-4496-8926-17bde2710d5e",
+      "title": "",
+      "fullFile": "cypress\\integration\\QAM\\Signup.js",
+      "file": "cypress\\integration\\QAM\\Signup.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "fdc961cb-12f0-4ea5-9564-a0b7442c159e",
+          "title": "SignUp",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Sign Up",
+              "fullTitle": "SignUp Sign Up",
+              "timedOut": null,
+              "duration": 25468,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://dev.bonoud.com/');\ncy.get('.mat-focus-indicator').contains('تسجيل').click();\ncy.get('#name').type('automation_testing4');\ncy.get('#user_name').type('automation_testing4');\ncy.get('#phone').type('0492288644');\ncy.get('#organization_name').type('automation_testing4');\ncy.get('#domain_name').type('automation_testing4');\ncy.get('#email').type('automation_testin4g@g.com');\ncy.get('input[type=\"password\"]').type('asdfghjkl1');\ncy.get('.w-100').contains('تسجيل').click();\ncy.contains('اهلا', {\n  timeout: 10000\n}).should('be.visible');",
+              "err": {
+                "message": "AssertionError: Timed out retrying: Expected to find content: 'اهلا' but never did.",
+                "estack": "AssertionError: Timed out retrying: Expected to find content: 'اهلا' but never did.\n    at Context.eval (http://dev.bonoud.com/__cypress/tests?p=cypress\\integration\\QAM\\Signup.js:113:8)",
+                "diff": null
+              },
+              "uuid": "fba07a95-f5e8-481c-8d0e-47af01bfab2d",
+              "parentUUID": "fdc961cb-12f0-4ea5-9564-a0b7442c159e",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "fba07a95-f5e8-481c-8d0e-47af01bfab2d"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 25468,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}

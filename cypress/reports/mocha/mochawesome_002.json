@@ -1,0 +1,92 @@
+{
+  "stats": {
+    "suites": 0,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2020-09-23T12:24:12.021Z",
+    "end": "2020-09-23T12:24:37.803Z",
+    "duration": 25782,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "bf081313-d7eb-4e51-bd7e-a7af33a2ecc6",
+      "title": "",
+      "fullFile": "cypress\\integration\\QAM\\Add_employee.js",
+      "file": "cypress\\integration\\QAM\\Add_employee.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "Add employee",
+          "fullTitle": "Add employee",
+          "timedOut": null,
+          "duration": 19872,
+          "state": "failed",
+          "speed": null,
+          "pass": false,
+          "fail": true,
+          "pending": false,
+          "context": null,
+          "code": "cy.visit('https://user1.dev.bonoud.com/');\ncy.get('#user_name').type('user1');\ncy.get('input[type=\"password\"]').type('asdfghjkl1');\ncy.get('.mat-raised-button').contains('دخول').click();\ncy.visit('https://user1.dev.bonoud.com/staff');\ncy.get('.mat-fab').click();\ncy.get('#name').type('automation_testing_employee');\ncy.get('#user_name').type('automation_testing_employee');\ncy.get('#phone').type('0492288612');\ncy.get('#email').type('automation_testing_employee@g.com');\ncy.get('mat-select[formcontrolname=\"gender\"]').click();\ncy.get('mat-option').contains('ذكر').click();\ncy.get('mat-select[formcontrolname=\"status\"]').click();\ncy.get('mat-option').contains('نشط').click();\ncy.get('#address').type('Nablus');\ncy.get('#job_description').type('UN');\ncy.get('button[aria-label=\"Open calendar\"]').click();\ncy.get('mat-calendar').click().contains('3');\ncy.get('input[type=\"password\"]').type('asdfghjkl1');\ncy.get('button[color=\"primary\"]').contains('اضافة').click();\ncy.contains('الموظفين', {\n  timeout: 10\n}).should('be.visible');",
+          "err": {
+            "message": "CypressError: `cy.contains()` failed because it requires the subject be a global `window` object.\n\nThe subject received was:\n\n  > `<mat-calendar#mat-datepicker-0.mat-calendar.ng-tns-c75-16.ng-trigger.ng-trigger-fadeInCalendar>`\n\nThe previous command that ran was:\n\n  > `cy.click()`\n\nAll 3 subject validations failed on this subject.",
+            "estack": "CypressError: `cy.contains()` failed because it requires the subject be a global `window` object.\n\nThe subject received was:\n\n  > `<mat-calendar#mat-datepicker-0.mat-calendar.ng-tns-c75-16.ng-trigger.ng-trigger-fadeInCalendar>`\n\nThe previous command that ran was:\n\n  > `cy.click()`\n\nAll 3 subject validations failed on this subject.\n    at ensureWindow (https://user1.dev.bonoud.com/__cypress/runner/cypress_runner.js:161230:24)\n    at validateType (https://user1.dev.bonoud.com/__cypress/runner/cypress_runner.js:161046:16)\n    at Object.ensureSubjectByType (https://user1.dev.bonoud.com/__cypress/runner/cypress_runner.js:161082:11)\n    at pushSubjectAndValidate (https://user1.dev.bonoud.com/__cypress/runner/cypress_runner.js:169858:15)\n    at Context.<anonymous> (https://user1.dev.bonoud.com/__cypress/runner/cypress_runner.js:170187:18)\nFrom Your Spec Code:\n    at Context.eval (https://user1.dev.bonoud.com/__cypress/tests?p=cypress\\integration\\QAM\\Add_employee.js:117:34)",
+            "diff": null
+          },
+          "uuid": "99503af6-d75e-43fc-ab37-1c98498031f0",
+          "parentUUID": "bf081313-d7eb-4e51-bd7e-a7af33a2ecc6",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [],
+      "failures": [
+        "99503af6-d75e-43fc-ab37-1c98498031f0"
+      ],
+      "pending": [],
+      "skipped": [],
+      "duration": 19872,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}

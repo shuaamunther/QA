@@ -1,0 +1,88 @@
+{
+  "stats": {
+    "suites": 0,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-09-23T12:24:52.573Z",
+    "end": "2020-09-23T12:25:23.067Z",
+    "duration": 30494,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "34d6ab58-66a4-40d7-b5be-ad31b3b56b31",
+      "title": "",
+      "fullFile": "cypress\\integration\\QAM\\Edit _employee.js",
+      "file": "cypress\\integration\\QAM\\Edit _employee.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "Edit employee",
+          "fullTitle": "Edit employee",
+          "timedOut": null,
+          "duration": 23012,
+          "state": "passed",
+          "speed": "slow",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "cy.visit('https://user1.dev.bonoud.com/');\ncy.get('#user_name').type('user1');\ncy.get('input[type=\"password\"]').type('asdfghjkl1');\ncy.get('.mat-raised-button').contains('دخول').click();\ncy.visit('https://user1.dev.bonoud.com/staff');\ncy.get('mat-card-actions').children('button').first().click();\ncy.get('#name').clear();\ncy.get('#name').type('auto_employee');\ncy.get('#phone').clear();\ncy.get('#phone').type('0492288612');\ncy.get('#email').clear();\ncy.get('#email').type('automation_testing_employee@g.com');\ncy.get('mat-select[formcontrolname=\"gender\"]').click();\ncy.get('mat-option').contains('ذكر').click();\ncy.get('mat-select[formcontrolname=\"status\"]').click();\ncy.get('mat-option').contains('نشط').click();\ncy.get('#address').clear();\ncy.get('#address').type('Nablus');\ncy.get('#job_description').clear();\ncy.get('#job_description').type('UN');\ncy.get('#date_of_birth').clear();\ncy.get('button[aria-label=\"Open calendar\"]').click();\ncy.get('mat-calendar').click().contains('3');\ncy.get('input[type=\"password\"]').type('asdfghjkl1');\ncy.get('button[color=\"primary\"]').contains('تعديل').click();",
+          "err": {},
+          "uuid": "1a3cc4cc-71ac-4ffe-bc02-39b0f34c5365",
+          "parentUUID": "34d6ab58-66a4-40d7-b5be-ad31b3b56b31",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [
+        "1a3cc4cc-71ac-4ffe-bc02-39b0f34c5365"
+      ],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 23012,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}

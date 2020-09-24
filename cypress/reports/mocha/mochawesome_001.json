@@ -1,0 +1,92 @@
+{
+  "stats": {
+    "suites": 0,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2020-09-23T12:23:35.583Z",
+    "end": "2020-09-23T12:23:57.531Z",
+    "duration": 21948,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e4c163d9-9a1e-43a1-87d2-c65ea9732ef3",
+      "title": "",
+      "fullFile": "cypress\\integration\\QAM\\Add_client.js",
+      "file": "cypress\\integration\\QAM\\Add_client.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "Add Client",
+          "fullTitle": "Add Client",
+          "timedOut": null,
+          "duration": 14297,
+          "state": "failed",
+          "speed": null,
+          "pass": false,
+          "fail": true,
+          "pending": false,
+          "context": null,
+          "code": "cy.visit('https://user1.dev.bonoud.com/');\ncy.get('#user_name').type('user1');\ncy.get('input[type=\"password\"]').type('asdfghjkl1');\ncy.get('.mat-raised-button').contains('دخول').click();\ncy.visit('https://user1.dev.bonoud.com/clients');\ncy.get('.mat-fab').click();\ncy.get('#name').type('automation_testing_employee');\ncy.get('#phoneNumber').type('0492288612');\ncy.get('#email').type('automation_testing_employee@g.com');\ncy.get('mat-select[formcontrolname=\"gender\"]').click();\ncy.get('mat-option').contains('ذكر').click();\ncy.get('mat-select[formcontrolname=\"status\"]').click();\ncy.get('mat-option').contains('نشط').click();\ncy.get('mat-select[formcontrolname=\"client_type\"]').click();\ncy.get('mat-option').contains('فردي').click();\ncy.get('#address').type('Nablus');\ncy.get('button[aria-label=\"Open calendar\"]').click();\ncy.get('mat-calendar').click().contains('3');\ncy.get('#id_number').type('987845618');\ncy.get('button[color=\"primary\"]').contains('اضافة').click();\ncy.contains('الموكلين', {\n  timeout: 10\n}).should('be.visible');",
+          "err": {
+            "message": "AssertionError: Timed out retrying: Expected to find element: `.mat-fab`, but never found it.",
+            "estack": "AssertionError: Timed out retrying: Expected to find element: `.mat-fab`, but never found it.\n    at Context.eval (https://user1.dev.bonoud.com/__cypress/tests?p=cypress\\integration\\QAM\\Add_client.js:105:6)",
+            "diff": null
+          },
+          "uuid": "0b3245bb-e5b1-4352-b71c-ee1ec4c00024",
+          "parentUUID": "e4c163d9-9a1e-43a1-87d2-c65ea9732ef3",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [],
+      "failures": [
+        "0b3245bb-e5b1-4352-b71c-ee1ec4c00024"
+      ],
+      "pending": [],
+      "skipped": [],
+      "duration": 14297,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}

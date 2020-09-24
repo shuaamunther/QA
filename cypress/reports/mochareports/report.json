@@ -1,0 +1,376 @@
+{
+  "stats": {
+    "suites": 7,
+    "tests": 7,
+    "passes": 3,
+    "pending": 0,
+    "failures": 4,
+    "start": "2020-09-23T12:28:22.703Z",
+    "end": "2020-09-23T12:28:22.703Z",
+    "duration": 126607,
+    "testsRegistered": 7,
+    "passPercent": 42.857142857142854,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e4c163d9-9a1e-43a1-87d2-c65ea9732ef3",
+      "title": "",
+      "fullFile": "cypress\\integration\\QAM\\Add_client.js",
+      "file": "cypress\\integration\\QAM\\Add_client.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "Add Client",
+          "fullTitle": "Add Client",
+          "timedOut": null,
+          "duration": 14297,
+          "state": "failed",
+          "speed": null,
+          "pass": false,
+          "fail": true,
+          "pending": false,
+          "context": null,
+          "code": "cy.visit('https://user1.dev.bonoud.com/');\ncy.get('#user_name').type('user1');\ncy.get('input[type=\"password\"]').type('asdfghjkl1');\ncy.get('.mat-raised-button').contains('دخول').click();\ncy.visit('https://user1.dev.bonoud.com/clients');\ncy.get('.mat-fab').click();\ncy.get('#name').type('automation_testing_employee');\ncy.get('#phoneNumber').type('0492288612');\ncy.get('#email').type('automation_testing_employee@g.com');\ncy.get('mat-select[formcontrolname=\"gender\"]').click();\ncy.get('mat-option').contains('ذكر').click();\ncy.get('mat-select[formcontrolname=\"status\"]').click();\ncy.get('mat-option').contains('نشط').click();\ncy.get('mat-select[formcontrolname=\"client_type\"]').click();\ncy.get('mat-option').contains('فردي').click();\ncy.get('#address').type('Nablus');\ncy.get('button[aria-label=\"Open calendar\"]').click();\ncy.get('mat-calendar').click().contains('3');\ncy.get('#id_number').type('987845618');\ncy.get('button[color=\"primary\"]').contains('اضافة').click();\ncy.contains('الموكلين', {\n  timeout: 10\n}).should('be.visible');",
+          "err": {
+            "message": "AssertionError: Timed out retrying: Expected to find element: `.mat-fab`, but never found it.",
+            "estack": "AssertionError: Timed out retrying: Expected to find element: `.mat-fab`, but never found it.\n    at Context.eval (https://user1.dev.bonoud.com/__cypress/tests?p=cypress\\integration\\QAM\\Add_client.js:105:6)",
+            "diff": null
+          },
+          "uuid": "0b3245bb-e5b1-4352-b71c-ee1ec4c00024",
+          "parentUUID": "e4c163d9-9a1e-43a1-87d2-c65ea9732ef3",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [],
+      "failures": [
+        "0b3245bb-e5b1-4352-b71c-ee1ec4c00024"
+      ],
+      "pending": [],
+      "skipped": [],
+      "duration": 14297,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "bf081313-d7eb-4e51-bd7e-a7af33a2ecc6",
+      "title": "",
+      "fullFile": "cypress\\integration\\QAM\\Add_employee.js",
+      "file": "cypress\\integration\\QAM\\Add_employee.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "Add employee",
+          "fullTitle": "Add employee",
+          "timedOut": null,
+          "duration": 19872,
+          "state": "failed",
+          "speed": null,
+          "pass": false,
+          "fail": true,
+          "pending": false,
+          "context": null,
+          "code": "cy.visit('https://user1.dev.bonoud.com/');\ncy.get('#user_name').type('user1');\ncy.get('input[type=\"password\"]').type('asdfghjkl1');\ncy.get('.mat-raised-button').contains('دخول').click();\ncy.visit('https://user1.dev.bonoud.com/staff');\ncy.get('.mat-fab').click();\ncy.get('#name').type('automation_testing_employee');\ncy.get('#user_name').type('automation_testing_employee');\ncy.get('#phone').type('0492288612');\ncy.get('#email').type('automation_testing_employee@g.com');\ncy.get('mat-select[formcontrolname=\"gender\"]').click();\ncy.get('mat-option').contains('ذكر').click();\ncy.get('mat-select[formcontrolname=\"status\"]').click();\ncy.get('mat-option').contains('نشط').click();\ncy.get('#address').type('Nablus');\ncy.get('#job_description').type('UN');\ncy.get('button[aria-label=\"Open calendar\"]').click();\ncy.get('mat-calendar').click().contains('3');\ncy.get('input[type=\"password\"]').type('asdfghjkl1');\ncy.get('button[color=\"primary\"]').contains('اضافة').click();\ncy.contains('الموظفين', {\n  timeout: 10\n}).should('be.visible');",
+          "err": {
+            "message": "CypressError: `cy.contains()` failed because it requires the subject be a global `window` object.\n\nThe subject received was:\n\n  > `<mat-calendar#mat-datepicker-0.mat-calendar.ng-tns-c75-16.ng-trigger.ng-trigger-fadeInCalendar>`\n\nThe previous command that ran was:\n\n  > `cy.click()`\n\nAll 3 subject validations failed on this subject.",
+            "estack": "CypressError: `cy.contains()` failed because it requires the subject be a global `window` object.\n\nThe subject received was:\n\n  > `<mat-calendar#mat-datepicker-0.mat-calendar.ng-tns-c75-16.ng-trigger.ng-trigger-fadeInCalendar>`\n\nThe previous command that ran was:\n\n  > `cy.click()`\n\nAll 3 subject validations failed on this subject.\n    at ensureWindow (https://user1.dev.bonoud.com/__cypress/runner/cypress_runner.js:161230:24)\n    at validateType (https://user1.dev.bonoud.com/__cypress/runner/cypress_runner.js:161046:16)\n    at Object.ensureSubjectByType (https://user1.dev.bonoud.com/__cypress/runner/cypress_runner.js:161082:11)\n    at pushSubjectAndValidate (https://user1.dev.bonoud.com/__cypress/runner/cypress_runner.js:169858:15)\n    at Context.<anonymous> (https://user1.dev.bonoud.com/__cypress/runner/cypress_runner.js:170187:18)\nFrom Your Spec Code:\n    at Context.eval (https://user1.dev.bonoud.com/__cypress/tests?p=cypress\\integration\\QAM\\Add_employee.js:117:34)",
+            "diff": null
+          },
+          "uuid": "99503af6-d75e-43fc-ab37-1c98498031f0",
+          "parentUUID": "bf081313-d7eb-4e51-bd7e-a7af33a2ecc6",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [],
+      "failures": [
+        "99503af6-d75e-43fc-ab37-1c98498031f0"
+      ],
+      "pending": [],
+      "skipped": [],
+      "duration": 19872,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "34d6ab58-66a4-40d7-b5be-ad31b3b56b31",
+      "title": "",
+      "fullFile": "cypress\\integration\\QAM\\Edit _employee.js",
+      "file": "cypress\\integration\\QAM\\Edit _employee.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "Edit employee",
+          "fullTitle": "Edit employee",
+          "timedOut": null,
+          "duration": 23012,
+          "state": "passed",
+          "speed": "slow",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "cy.visit('https://user1.dev.bonoud.com/');\ncy.get('#user_name').type('user1');\ncy.get('input[type=\"password\"]').type('asdfghjkl1');\ncy.get('.mat-raised-button').contains('دخول').click();\ncy.visit('https://user1.dev.bonoud.com/staff');\ncy.get('mat-card-actions').children('button').first().click();\ncy.get('#name').clear();\ncy.get('#name').type('auto_employee');\ncy.get('#phone').clear();\ncy.get('#phone').type('0492288612');\ncy.get('#email').clear();\ncy.get('#email').type('automation_testing_employee@g.com');\ncy.get('mat-select[formcontrolname=\"gender\"]').click();\ncy.get('mat-option').contains('ذكر').click();\ncy.get('mat-select[formcontrolname=\"status\"]').click();\ncy.get('mat-option').contains('نشط').click();\ncy.get('#address').clear();\ncy.get('#address').type('Nablus');\ncy.get('#job_description').clear();\ncy.get('#job_description').type('UN');\ncy.get('#date_of_birth').clear();\ncy.get('button[aria-label=\"Open calendar\"]').click();\ncy.get('mat-calendar').click().contains('3');\ncy.get('input[type=\"password\"]').type('asdfghjkl1');\ncy.get('button[color=\"primary\"]').contains('تعديل').click();",
+          "err": {},
+          "uuid": "1a3cc4cc-71ac-4ffe-bc02-39b0f34c5365",
+          "parentUUID": "34d6ab58-66a4-40d7-b5be-ad31b3b56b31",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [
+        "1a3cc4cc-71ac-4ffe-bc02-39b0f34c5365"
+      ],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 23012,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "bea29032-6766-4a41-9c59-e3252fe4f7c4",
+      "title": "",
+      "fullFile": "cypress\\integration\\QAM\\Edit_client.js",
+      "file": "cypress\\integration\\QAM\\Edit_client.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "Edit client",
+          "fullTitle": "Edit client",
+          "timedOut": null,
+          "duration": 20779,
+          "state": "passed",
+          "speed": "slow",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "cy.visit('https://user1.dev.bonoud.com/');\ncy.visit('https://user1.dev.bonoud.com/');\ncy.get('#user_name').type('user1');\ncy.get('input[type=\"password\"]').type('asdfghjkl1');\ncy.get('.mat-raised-button').contains('دخول').click();\ncy.visit('https://user1.dev.bonoud.com/clients');\ncy.get('mat-card-actions').children('button').first().click();\ncy.get('#name').clear();\ncy.get('#name').type('automation_testing_client');\ncy.get('#phone').clear();\ncy.get('#phone').type('0492288612');\ncy.get('#email').clear();\ncy.get('#email').type('automation_client@g.com');\ncy.get('mat-select[formcontrolname=\"gender\"]').click();\ncy.get('mat-option').contains('ذكر').click();\ncy.get('mat-select[formcontrolname=\"status\"]').click();\ncy.get('mat-option').contains('نشط').click();\ncy.get('mat-select[formcontrolname=\"client_type\"]').click();\ncy.get('mat-option').contains('فردي').click();\ncy.get('#address').clear();\ncy.get('#address').type('Nablus');\ncy.get('#date_of_birth').clear();\ncy.get('button[aria-label=\"Open calendar\"]').click();\ncy.get('mat-calendar').click().contains('3');\nvar imagename = 'icons8-key-64.png';\ncy.get('input[type=\"file\"]').attachFile(imagename);\nvar fileName = 'advocate.pdf';\ncy.get('ngx-mat-file-input[formcontrolname=\"fileInput\"]').attachFile(fileName);\ncy.get('button[color=\"primary\"]').contains('تعديل').click();",
+          "err": {},
+          "uuid": "211698a3-177c-47e7-af9f-6f1ffd061441",
+          "parentUUID": "bea29032-6766-4a41-9c59-e3252fe4f7c4",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [
+        "211698a3-177c-47e7-af9f-6f1ffd061441"
+      ],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 20779,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "52f557e9-bbb4-4fdc-a8b7-26a2d7616286",
+      "title": "",
+      "fullFile": "cypress\\integration\\QAM\\Edit_organization.js",
+      "file": "cypress\\integration\\QAM\\Edit_organization.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "Edit Organization",
+          "fullTitle": "Edit Organization",
+          "timedOut": null,
+          "duration": 13097,
+          "state": "passed",
+          "speed": "slow",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "cy.visit('https://user1.dev.bonoud.com/');\ncy.get('#user_name').type('user1');\ncy.get('input[type=\"password\"]').type('asdfghjkl1');\ncy.get('.mat-raised-button').contains('دخول').click();\ncy.visit('https://user1.dev.bonoud.com/organization');\ncy.get('button').contains('تعديل').click();\ncy.get('#name').clear();\ncy.get('#name').type('automation_O');\ncy.get('#phone').clear();\ncy.get('#phone').type('0492288616');\ncy.get('#email').clear();\ncy.get('#email').type('automation_testing@g.com');\ncy.get('#address').clear();\ncy.get('#address').type('Nablus');\nvar imageName = 'wrong_response.png';\ncy.get('ngx-mat-file-input').attachFile(imageName);\ncy.get('button[color=\"primary\"]').contains('حفظ').click(); //cy.contains(\"تم تعديل بنجاح\",{timeout:100})",
+          "err": {},
+          "uuid": "45414032-b665-4540-afdb-70ccc33bee3a",
+          "parentUUID": "52f557e9-bbb4-4fdc-a8b7-26a2d7616286",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [
+        "45414032-b665-4540-afdb-70ccc33bee3a"
+      ],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 13097,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "bc79ca70-e633-4137-9e73-efac1b6dd582",
+      "title": "",
+      "fullFile": "cypress\\integration\\QAM\\Login.js",
+      "file": "cypress\\integration\\QAM\\Login.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "ef0b9c95-23a3-472c-95dc-f6aa3c052978",
+          "title": "Login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Sign in",
+              "fullTitle": "Login Sign in",
+              "timedOut": null,
+              "duration": 10082,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://dev.bonoud.com/');\ncy.get('.signin-button').contains('دخول').click();\ncy.get('input[placeholder=\"اسم المستخدم\"]').type('user1');\ncy.get('input[type=\"password\"]').type('asdfghjkl1');\ncy.get('.mat-raised-button').contains('دخول').click();\ncy.url().should('eq', 'https://user1.dev.bonoud.com/');",
+              "err": {
+                "message": "CypressError: Cypress detected a cross origin error happened on page load:\n\n  > Blocked a frame with origin \"http://dev.bonoud.com\" from accessing a cross-origin frame.\n\nBefore the page load, you were bound to the origin policy:\n\n  > http://bonoud.com\n\nA cross origin error happens when your application navigates to a new URL which does not match the origin policy above.\n\nA new URL does not match the origin policy if the 'protocol', 'port' (if specified), and/or 'host' (unless of the same superdomain) are different.\n\nCypress does not allow you to navigate to a different origin URL within a single test.\n\nYou may need to restructure some of your test code to avoid this problem.\n\nAlternatively you can also disable Chrome Web Security in Chromium-based browsers which will turn off this restriction by setting { chromeWebSecurity: false } in `cypress.json`.\n\nhttps://on.cypress.io/cross-origin-violation",
+                "estack": "CypressError: Cypress detected a cross origin error happened on page load:\n\n  > Blocked a frame with origin \"http://dev.bonoud.com\" from accessing a cross-origin frame.\n\nBefore the page load, you were bound to the origin policy:\n\n  > http://bonoud.com\n\nA cross origin error happens when your application navigates to a new URL which does not match the origin policy above.\n\nA new URL does not match the origin policy if the 'protocol', 'port' (if specified), and/or 'host' (unless of the same superdomain) are different.\n\nCypress does not allow you to navigate to a different origin URL within a single test.\n\nYou may need to restructure some of your test code to avoid this problem.\n\nAlternatively you can also disable Chrome Web Security in Chromium-based browsers which will turn off this restriction by setting { chromeWebSecurity: false } in `cypress.json`.\n\nhttps://on.cypress.io/cross-origin-violation\n    at onPageLoadErr (http://dev.bonoud.com/__cypress/runner/cypress_runner.js:157076:17)\n    at HTMLIFrameElement.<anonymous> (http://dev.bonoud.com/__cypress/runner/cypress_runner.js:170112:17)\n    at HTMLIFrameElement.dispatch (http://dev.bonoud.com/__cypress/runner/cypress_runner.js:91166:27)\n    at HTMLIFrameElement.elemData.handle (http://dev.bonoud.com/__cypress/runner/cypress_runner.js:90974:28)\nFrom Your Spec Code:\n    at Context.eval (http://dev.bonoud.com/__cypress/tests?p=cypress\\integration\\QAM\\Login.js:106:14)",
+                "diff": null
+              },
+              "uuid": "62d64e35-8706-4460-9538-c5b335a2d6d4",
+              "parentUUID": "ef0b9c95-23a3-472c-95dc-f6aa3c052978",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "62d64e35-8706-4460-9538-c5b335a2d6d4"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 10082,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "cfb342d9-deee-4496-8926-17bde2710d5e",
+      "title": "",
+      "fullFile": "cypress\\integration\\QAM\\Signup.js",
+      "file": "cypress\\integration\\QAM\\Signup.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "fdc961cb-12f0-4ea5-9564-a0b7442c159e",
+          "title": "SignUp",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Sign Up",
+              "fullTitle": "SignUp Sign Up",
+              "timedOut": null,
+              "duration": 25468,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://dev.bonoud.com/');\ncy.get('.mat-focus-indicator').contains('تسجيل').click();\ncy.get('#name').type('automation_testing4');\ncy.get('#user_name').type('automation_testing4');\ncy.get('#phone').type('0492288644');\ncy.get('#organization_name').type('automation_testing4');\ncy.get('#domain_name').type('automation_testing4');\ncy.get('#email').type('automation_testin4g@g.com');\ncy.get('input[type=\"password\"]').type('asdfghjkl1');\ncy.get('.w-100').contains('تسجيل').click();\ncy.contains('اهلا', {\n  timeout: 10000\n}).should('be.visible');",
+              "err": {
+                "message": "AssertionError: Timed out retrying: Expected to find content: 'اهلا' but never did.",
+                "estack": "AssertionError: Timed out retrying: Expected to find content: 'اهلا' but never did.\n    at Context.eval (http://dev.bonoud.com/__cypress/tests?p=cypress\\integration\\QAM\\Signup.js:113:8)",
+                "diff": null
+              },
+              "uuid": "fba07a95-f5e8-481c-8d0e-47af01bfab2d",
+              "parentUUID": "fdc961cb-12f0-4ea5-9564-a0b7442c159e",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "fba07a95-f5e8-481c-8d0e-47af01bfab2d"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 25468,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}
